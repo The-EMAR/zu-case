@@ -1,0 +1,125 @@
+{% assign _section = section.settings %}
+
+{{- 'products-release.css' | asset_url | stylesheet_tag -}}
+{{- 'card-release.css' | asset_url | stylesheet_tag -}}
+
+<script src="{{- 'add-to-cart.js' | asset_url -}}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+{% if _section.product_list != blank or _section.collection_list %}
+  <script src="{{- 'swiper-bundle.min.js' | asset_url -}}" defer="defer"></script>
+  <script src="{{- 'products-release-slider.js' | asset_url -}}" defer="defer"></script>
+
+  {{- 'swiper-bundle.min.css' | asset_url | stylesheet_tag -}}
+{% endif %}
+
+{% if _section.heading != blank or _section.product_list != blank or _section.collection_list %}
+  <section class="section-products-release">
+    <div class="container">
+      {% if _section.heading != blank %}
+        <header class="section__head" style="text-align: {{ _section.heading_position }};">
+          <h2>
+            {{ _section.heading }}
+
+            {% if _section.heading_tag != blank %}
+              <span>{{ _section.heading_tag }}</span>
+            {% endif %}         
+          </h2>
+        </header><!-- /.section__head -->
+      {% endif %}
+
+      {% if _section.product_list != blank or _section.collection_list %}
+        <div class="section__body">
+          <products-release-slider class="swiper section__slider">
+            <div class="swiper-wrapper">
+              {% assign _products = _section.product_list | default: _section.collection_list %}
+              
+              {% for _product in _products %}
+                <div class="swiper-slide" >
+                  <div class="card-release">
+                    <div class="card__tags">
+                      <span class="card__tag-discount">-30%</span>
+
+                      <span class="card__tag-new">New</span>
+                    </div><!-- /.card__tags -->
+
+                    <a class="card__image" href="{{ _product.url }}">
+                      <img src="{{ _product.featured_image |  image_url: width: 180 }}" width="180" height="auto" loading="lazy" alt="">
+                    </a>
+
+                    <div class="card__content">
+                      <h4>
+                        <a href="{{ _product.url }}">
+                          {{ _product.title }}
+                        </a>
+                      </h4>
+                    </div><!-- /.card__content -->
+
+                    {%- assign product_form_id = 'product-form-' | append: section.id -%}
+
+                    {% render 'buy-buttons', price: true, class: 'section__form' block: block, product: _product, product_form_id: product_form_id, section_id: section.id %}
+                  </div><!-- /.card-release -->
+                </div><!-- /.swiper-slide -->
+              {% endfor %}
+            </div><!-- /.swiper-wrapper -->
+
+            <div class="swiper-pagination"></div><!-- /.swiper-pagination -->
+          </products-release-slider><!-- /.products-release-slider -->
+        </div><!-- /.section__body -->
+      {% endif %}
+    </div><!-- /.container -->
+  </section><!-- /.section-products-release -->
+{% endif %}
+
+{% schema %}
+  {
+  "name": "Products Release",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "html",
+      "id": "heading_tag",
+      "label": "Heading Tag"
+    },
+    {
+      "type": "select",
+      "id": "heading_position",
+      "label": "Heading Position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Products"
+    },
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Product List"
+    },
+    {
+      "type": "collection_list",
+      "id": "collection_list",
+      "label": "Collection List"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Products Release"
+    }
+  ]
+}  
+{% endschema %}

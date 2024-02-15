@@ -1,0 +1,132 @@
+{% assign _section = section.settings %}
+
+{{- 'footer.css' | asset_url | stylesheet_tag -}}
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="grid__col">
+        <div class="footer__logo">
+          <a href="#" class="header__heading-link link link--text focus-inset">
+            {%- if settings.footer_logo != blank -%}
+              <div class="header__heading-logo-wrapper">
+                {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+                {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+                {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
+                {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+                {{ settings.footer_logo | image_url: width: 600 | image_tag:
+                  class: 'header__heading-logo motion-reduce',
+                  widths: widths,
+                  height: logo_height,
+                  width: settings.logo_width,
+                  alt: logo_alt,
+                  sizes: sizes,
+                  preload: true
+                }}
+              </div>
+            {%- else -%}
+              <span class="h2">{{ shop.name }}</span>
+            {%- endif -%}
+          </a>
+        </div><!-- /.footer__logo -->
+      </div><!-- /.grid__col -->
+
+      {% if _section.contact_heading != blank or _section.contact_phone != blank or _section.contact_email != blank or _section.contact_work_time != blank %}
+        <div class="grid__col">
+          {% if _section.contact_heading != blank %}
+            <h4>{{ _section.contact_heading }}</h4>
+          {% endif %}
+          
+          {% if _section.contact_phone != blank or _section.contact_email != blank or _section.contact_work_time != blank %}
+            
+          {% endif %}
+          <ul>
+            {% if _section.contact_phone != blank %}
+              <li>
+                <i class="fa-solid fa-phone"></i>
+
+                <a href="tel:{{ _section.contact_phone }}">{{ _section.contact_phone }}</a>
+              </li>
+            {% endif %}
+
+            {% if _section.contact_email != blank %}
+              <li>
+                <i class="fa-regular fa-envelope"></i>
+
+                <a href="mailto:{{ _section.contact_email }}">{{ _section.contact_email }}</a>
+              </li>
+            {% endif %}
+
+            {% if _section.contact_work_time != blank %}
+              <li>
+                <i class="fa-regular fa-clock"></i>
+
+                <span>{{ _section.contact_work_time }}</span>
+              </li>
+            {% endif %}
+          </ul>
+        </div><!-- /.grid__col -->
+      {% endif %}
+
+      {% if _section.information_heading != blank or _section.information_content != blank %}
+        <div class="grid__col">
+          {% if _section.information_heading != blank %}
+            <h4>{{ _section.information_heading }}</h4>
+          {% endif %}
+
+          {% if _section.information_content != blank %}
+            <div class="footer__entry">
+              {{ _section.information_content }}
+            </div><!-- /.footer__entry -->
+          {% endif %}
+        </div><!-- /.grid__col -->
+      {% endif %}
+    </div><!-- /.footer__grid -->
+  </div><!-- /.container -->
+</footer><!-- /.footer -->
+
+{% schema %}
+  {
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Contact"
+    },
+    {
+      "type": "text",
+      "id": "contact_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "contact_phone",
+      "label": "Phone"
+    },
+    {
+      "type": "text",
+      "id": "contact_email",
+      "label": "Email"
+    },
+    {
+      "type": "text",
+      "id": "contact_work_time",
+      "label": "Work Time"
+    },
+    {
+      "type": "header",
+      "content": "Information"
+    },
+    {
+      "type": "text",
+      "id": "information_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "information_content",
+      "label": "Content"
+    }
+  ]
+}  
+{% endschema %}

@@ -1,0 +1,168 @@
+{
+  "sections": {
+    "5b6919c2-4810-4728-a53b-ec50cf10a895": {
+      "type": "hero",
+      "blocks": {
+        "66bce736-3b83-4246-aeca-2f254678f19e": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/f24effff-b38b-45b3-be62-d6bde4b9c3a4.jpg",
+            "link": ""
+          }
+        },
+        "552c385d-24cb-41dc-832d-91ed5681799a": {
+          "type": "slide",
+          "settings": {
+            "link": ""
+          }
+        },
+        "37a34df5-0b65-4c60-9226-fc217d4d4e2c": {
+          "type": "slide",
+          "settings": {
+            "link": "\/"
+          }
+        }
+      },
+      "block_order": [
+        "66bce736-3b83-4246-aeca-2f254678f19e",
+        "552c385d-24cb-41dc-832d-91ed5681799a",
+        "37a34df5-0b65-4c60-9226-fc217d4d4e2c"
+      ],
+      "settings": {
+      }
+    },
+    "91373c98-3f0d-4b73-9d9d-f14fb46f4fbf": {
+      "type": "icon-text",
+      "blocks": {
+        "37f69dc9-b1f7-433c-88ae-0e50b9e051d4": {
+          "type": "list",
+          "settings": {
+            "icon": "<i class=\"fa-solid fa-truck\"><\/i>",
+            "text": "Бърза доставка"
+          }
+        },
+        "3a19c193-222a-4c39-9226-2d38314fb3de": {
+          "type": "list",
+          "settings": {
+            "icon": "<i class=\"fa-regular fa-gem\"><\/i>",
+            "text": "Гарантирано качество"
+          }
+        },
+        "f9a52e79-ae63-4f32-bbf8-c44eb4c6f83a": {
+          "type": "list",
+          "settings": {
+            "icon": "<i class=\"fa-solid fa-recycle\"><\/i>",
+            "text": "14 дни право на връщане"
+          }
+        }
+      },
+      "block_order": [
+        "37f69dc9-b1f7-433c-88ae-0e50b9e051d4",
+        "3a19c193-222a-4c39-9226-2d38314fb3de",
+        "f9a52e79-ae63-4f32-bbf8-c44eb4c6f83a"
+      ],
+      "settings": {
+      }
+    },
+    "885b4d54-ed27-4bd0-b4d7-935e36be59a9": {
+      "type": "products-release",
+      "settings": {
+        "heading": "Най-нови",
+        "heading_tag": "News",
+        "heading_position": "center",
+        "product_list": [
+
+        ],
+        "collection_list": [
+
+        ]
+      }
+    },
+    "c858af48-829f-4997-9dfc-758ba3288317": {
+      "type": "gallery",
+      "blocks": {
+        "90482a4b-9a03-4163-a94b-7e120d436ab5": {
+          "type": "offer",
+          "settings": {
+            "offer_link": ""
+          }
+        },
+        "e999553d-ba54-4ca2-9bb1-4f623c45b9a7": {
+          "type": "offer",
+          "settings": {
+            "offer_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "90482a4b-9a03-4163-a94b-7e120d436ab5",
+        "e999553d-ba54-4ca2-9bb1-4f623c45b9a7"
+      ],
+      "settings": {
+        "heading": "Gallery",
+        "heading_tag": "<i class=\"fa-regular fa-gem\"><\/i>",
+        "heading_position": "center",
+        "product_list": [
+          "iphone-23",
+          "iphone-24",
+          "iphone-25",
+          "iphone-26",
+          "iphone-27",
+          "iphone-28",
+          "iphone-29",
+          "iphone-30",
+          "iphone-31",
+          "iphone-32",
+          "iphone-33",
+          "iphone-34",
+          "iphone-35",
+          "iphone-36",
+          "iphone-37"
+        ],
+        "offer_heading": "Най продавани ->",
+        "offer_slider_position": "none"
+      }
+    },
+    "cc5a7386-da06-48d5-8adc-f90f039dd3e8": {
+      "type": "categories",
+      "settings": {
+        "heading": "Категории",
+        "heading_tag": "",
+        "heading_position": "center",
+        "collection_list": [
+
+        ]
+      }
+    },
+    "e18f2d46-349a-4d2e-b79a-41c67467658a": {
+      "type": "products-release",
+      "settings": {
+        "heading": "Кейсове",
+        "heading_tag": "",
+        "heading_position": "left",
+        "product_list": [
+
+        ],
+        "collection_list": [
+
+        ]
+      }
+    },
+    "d24f7cfa-c19c-42a3-b26b-4eb675d622fb": {
+      "type": "section-newsletter",
+      "settings": {
+        "heading": "Може да се обърнете към \u2028нас по всяко време",
+        "heading_tag": "<i class=\"fa-regular fa-clock\"><\/i>"
+      }
+    }
+  },
+  "order": [
+    "5b6919c2-4810-4728-a53b-ec50cf10a895",
+    "91373c98-3f0d-4b73-9d9d-f14fb46f4fbf",
+    "885b4d54-ed27-4bd0-b4d7-935e36be59a9",
+    "c858af48-829f-4997-9dfc-758ba3288317",
+    "cc5a7386-da06-48d5-8adc-f90f039dd3e8",
+    "e18f2d46-349a-4d2e-b79a-41c67467658a",
+    "d24f7cfa-c19c-42a3-b26b-4eb675d622fb"
+  ]
+}

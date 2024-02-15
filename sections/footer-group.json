@@ -1,0 +1,20 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "contact_heading": "Контакти",
+        "contact_phone": "999-999-999",
+        "contact_email": "case4family@gmail.com",
+        "contact_work_time": "09:00 - 18:00",
+        "information_heading": "Информация",
+        "information_content": "<ul><li><a href=\"\/\" title=\"\/\">За нас<\/a><\/li><li><a href=\"\/\" title=\"\/\">Доставка<\/a><\/li><li><a href=\"\/\" title=\"\/\">Условия<\/a><\/li><\/ul>"
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
