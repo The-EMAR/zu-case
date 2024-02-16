@@ -5,12 +5,18 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "contact_heading": "Контакти",
-        "contact_phone": "999-999-999",
-        "contact_email": "case4family@gmail.com",
-        "contact_work_time": "09:00 - 18:00",
-        "information_heading": "Информация",
-        "information_content": "<ul><li><a href=\"\/\" title=\"\/\">За нас<\/a><\/li><li><a href=\"\/\" title=\"\/\">Доставка<\/a><\/li><li><a href=\"\/\" title=\"\/\">Условия<\/a><\/li><\/ul>"
+        "color_scheme": "scheme-1",
+        "newsletter_enable": true,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },

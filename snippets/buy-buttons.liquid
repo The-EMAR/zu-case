@@ -25,7 +25,7 @@
     -%}
 
     <product-form
-      class="product-form {{ class }}"
+      class="product-form"
       data-hide-errors="{{ gift_card_recipient_feature_active }}"
       data-section-id="{{ section.id }}"
     >
@@ -55,15 +55,10 @@
           type="hidden"
           name="id"
           value="{{ product.selected_or_first_available_variant.id }}"
-          disabled
+          {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+            disabled
+          {% endif %}
           class="product-variant-id"
-        >
-
-        <input
-          type="hidden"
-          name="product-url"
-          value="{{ product.url }}"
-          disabled
         >
 
         {%- if gift_card_recipient_feature_active -%}
@@ -80,7 +75,6 @@
               assign quantity_rule_soldout = true
             endif
           -%}
-
           <button
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
@@ -94,31 +88,10 @@
               {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
               {%- else -%}
-                {% if price %}
-                  <span class="button__price">
-                    <s class="button__price-compare">{{ product.compare_at_price | money }}</s>
-
-                    <ins class="button__price-default">{{ product.price | money }}</ins>
-                  </span>
-                  
-                  <i class="fa-solid fa-bag-shopping"></i>
-                {% else %}
-                  {{ 'products.product.add_to_cart' | t }}  
-                {% endif %}
+                {{ 'products.product.add_to_cart' | t }}
               {%- endif -%}
             </span>
-
-            <div class="loading-overlay__spinner hidden">
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                class="spinner"
-                viewBox="0 0 66 66"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-              </svg>
-            </div>
+            {%- render 'loading-spinner' -%}
           </button>
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
@@ -156,6 +129,7 @@
       data-root-url="{{ routes.root_url }}"
       data-variant-id="{{ product.selected_or_first_available_variant.id }}"
       data-has-only-default-variant="{{ product.has_only_default_variant }}"
+      data-product-page-color-scheme="gradient color-{{ section.settings.color_scheme }}"
     >
       <template>
         <pickup-availability-preview class="pickup-availability-preview">
