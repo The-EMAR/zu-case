@@ -4,6 +4,27 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "image_UxBVFe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/zucase-logo.svg",
+            "image_width": 550,
+            "alignment": ""
+          }
+        },
+        "link_list_ThAmrA": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        }
+      },
+      "block_order": [
+        "image_UxBVFe",
+        "link_list_ThAmrA"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
