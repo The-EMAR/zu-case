@@ -359,10 +359,22 @@ class MenuDrawer extends HTMLElement {
     this.querySelectorAll('summary').forEach((summary) =>
       summary.addEventListener('click', this.onSummaryClick.bind(this))
     );
+
     this.querySelectorAll(
       'button:not(.localization-selector):not(.country-selector__close-button):not(.country-filter__reset-button)'
     ).forEach((button) => button.addEventListener('click', this.onCloseButtonClick.bind(this))
     );
+
+    // Add event listener for custom inner-close-button
+    this.querySelectorAll('.inner-close-button').forEach((button) =>
+      button.addEventListener('click', this.onInnerCloseButtonClick.bind(this))
+    );
+  }
+
+  
+  onInnerCloseButtonClick(event) {
+    const detailsElement = event.currentTarget.closest('details');
+    this.closeMenuDrawer(event, detailsElement.querySelector('summary'));
   }
 
   onKeyUp(event) {
@@ -424,9 +436,11 @@ class MenuDrawer extends HTMLElement {
       details.removeAttribute('open');
       details.classList.remove('menu-opening');
     });
+
     this.mainDetailsToggle.querySelectorAll('.submenu-open').forEach((submenu) => {
       submenu.classList.remove('submenu-open');
     });
+
     document.body.classList.remove(`overflow-hidden-${this.dataset.breakpoint}`);
     removeTrapFocus(elementToFocus);
     this.closeAnimation(this.mainDetailsToggle);
@@ -937,7 +951,7 @@ class SlideshowComponent extends SliderComponent {
     const slideScrollPosition =
       this.slider.scrollLeft +
       this.sliderFirstItemNode.clientWidth *
-        (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
+      (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
     this.slider.scrollTo({
       left: slideScrollPosition,
     });
@@ -1107,8 +1121,7 @@ class VariantSelects extends HTMLElement {
     const sectionId = this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section;
 
     fetch(
-      `${this.dataset.url}?variant=${requestedVariantId}&section_id=${
-        this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section
+      `${this.dataset.url}?variant=${requestedVariantId}&section_id=${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section
       }`
     )
       .then((response) => response.text())

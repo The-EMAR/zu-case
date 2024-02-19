@@ -83,8 +83,14 @@
         </span>
       {%- endif -%}
     </div>
+
     <div class="price__sale">
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
+        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
+        <span class="price-item price-item--sale price-item--last">
+          <strong>От {{ money_price }}</strong>
+        </span>
+
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
         <span>
           <s class="price-item price-item--regular">
@@ -96,11 +102,8 @@
           </s>
         </span>
       {%- endunless -%}
-      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
-      <span class="price-item price-item--sale price-item--last">
-        {{ money_price }}
-      </span>
     </div>
+
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
       <span class="price-item price-item--last">
@@ -116,9 +119,14 @@
       </span>
     </small>
   </div>
+
   {%- if show_badges -%}
+    {% assign discountAmount = product.compare_at_price | minus: product.price %}
+    {% assign discountPercentage = discountAmount | times: 100 | divided_by: product.compare_at_price | round: 2 %}
+
     <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
-      {{ 'products.product.on_sale' | t }}
+      Sale {{ discountPercentage }}%
+      {% comment %} {{ 'products.product.on_sale' | t }} {% endcomment %}
     </span>
 
     <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">

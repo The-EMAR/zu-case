@@ -120,6 +120,9 @@
             </h3>
           </div>
           <div class="card__badge {{ settings.badge_position }}">
+            {% assign discountAmount = card_product.compare_at_price | minus: card_product.price %}
+            {% assign discountPercentage = discountAmount | times: 100 | divided_by: card_product.compare_at_price | round: 2 %}
+
             {%- if card_product.available == false -%}
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
@@ -132,7 +135,8 @@
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                 class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
               >
-                {{- 'products.product.on_sale' | t -}}
+                Sale Up To {{ discountPercentage }} %
+                {% comment %} {{- 'products.product.on_sale' | t -}} {% endcomment %}
               </span>
             {%- endif -%}
           </div>
@@ -152,7 +156,7 @@
               class="full-unstyled-link"
               aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
             >
-              {{ card_product.title | escape }}
+              {{ card_product.title | escape | truncate: 30 }}
             </a>
           </h3>
           <div class="card-information">

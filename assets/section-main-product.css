@@ -273,6 +273,8 @@ a.product__text {
 
 .product .price .badge {
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .product .price__container {
@@ -322,6 +324,7 @@ a.product__text {
 
 .product__tax {
   margin-top: -1.4rem;
+  display: none;
 }
 
 .product--no-media noscript .product-form__input,
@@ -356,6 +359,7 @@ a.product__text {
 
 .product-form__quantity .form__label {
   margin-bottom: 0.6rem;
+  display: none;
 }
 
 .price-per-item__label.form__label {
@@ -1198,6 +1202,7 @@ a.product__text {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-weight: 600;
 }
 
 .product--no-media .product__inventory {
