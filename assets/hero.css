@@ -1,0 +1,28 @@
+.hero {
+  
+}
+
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  vertical-align: top;
+}
+
+.hero .hero__image {
+  position: relative;
+  min-height: 17rem;
+  overflow: hidden;
+  border-radius: 1.6rem;
+}
+
+.hero .hero__inner {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1.6rem;
+  overflow: hidden;
+}

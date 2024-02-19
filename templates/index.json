@@ -1,5 +1,63 @@
 {
   "sections": {
+    "hero_r8ekdq": {
+      "type": "hero",
+      "blocks": {
+        "slide_wTiGdH": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/f24effff-b38b-45b3-be62-d6bde4b9c3a4.jpg"
+          }
+        },
+        "slide_9QXBez": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/f24effff-b38b-45b3-be62-d6bde4b9c3a4.jpg"
+          }
+        },
+        "slide_K9TzYE": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ES_60_8b55eeeb-2589-492a-b8ab-76e9747f149c.png"
+          }
+        },
+        "slide_jGg49b": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ES_60_8b55eeeb-2589-492a-b8ab-76e9747f149c.png"
+          }
+        },
+        "slide_PikdxY": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ES_60_8b55eeeb-2589-492a-b8ab-76e9747f149c.png"
+          }
+        },
+        "slide_EBdDkU": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ES_60_8b55eeeb-2589-492a-b8ab-76e9747f149c.png"
+          }
+        }
+      },
+      "block_order": [
+        "slide_wTiGdH",
+        "slide_9QXBez",
+        "slide_K9TzYE",
+        "slide_jGg49b",
+        "slide_PikdxY",
+        "slide_EBdDkU"
+      ],
+      "settings": {
+        "heading": "Image Slide",
+        "content": "<p>Image Slide Content<\/p>",
+        "color_scheme": "scheme-2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "slideshow_9Lagcw": {
       "type": "slideshow",
       "blocks": {
@@ -44,6 +102,7 @@
         "slide_qzMeki",
         "slide_MYchV9"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "small",
@@ -191,6 +250,7 @@
     }
   },
   "order": [
+    "hero_r8ekdq",
     "slideshow_9Lagcw",
     "collection_list_nLjRCi",
     "featured_collection_gGDRYA",
