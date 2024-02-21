@@ -3519,3 +3519,12 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
+
+/* Splide */
+
+/* Mobile */
+@media (max-width: 767px) {
+  .splide__track {
+    padding-right: 12rem !important;
+  }
+}

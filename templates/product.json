@@ -51,6 +51,11 @@
           "type": "description",
           "settings": {
           }
+        },
+        "product_services_V4jm9c": {
+          "type": "product_services",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -61,7 +66,8 @@
         "inventory_dz9eng",
         "quantity_selector",
         "buy_buttons",
-        "description"
+        "description",
+        "product_services_V4jm9c"
       ],
       "settings": {
         "enable_sticky_info": true,

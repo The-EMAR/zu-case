@@ -2,116 +2,16 @@
   "sections": {
     "hero_r8ekdq": {
       "type": "hero",
-      "blocks": {
-        "slide_wTiGdH": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/f24effff-b38b-45b3-be62-d6bde4b9c3a4.jpg"
-          }
-        },
-        "slide_9QXBez": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/f24effff-b38b-45b3-be62-d6bde4b9c3a4.jpg"
-          }
-        },
-        "slide_K9TzYE": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/ES_60_8b55eeeb-2589-492a-b8ab-76e9747f149c.png"
-          }
-        },
-        "slide_jGg49b": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/ES_60_8b55eeeb-2589-492a-b8ab-76e9747f149c.png"
-          }
-        },
-        "slide_PikdxY": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/ES_60_8b55eeeb-2589-492a-b8ab-76e9747f149c.png"
-          }
-        },
-        "slide_EBdDkU": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/ES_60_8b55eeeb-2589-492a-b8ab-76e9747f149c.png"
-          }
-        }
-      },
-      "block_order": [
-        "slide_wTiGdH",
-        "slide_9QXBez",
-        "slide_K9TzYE",
-        "slide_jGg49b",
-        "slide_PikdxY",
-        "slide_EBdDkU"
-      ],
       "settings": {
-        "heading": "Image Slide",
-        "content": "<p>Image Slide Content<\/p>",
+        "heading": "Най-нови",
+        "content": "<p>Описание<\/p>",
+        "slide_media": "contain",
+        "collections": [
+          "кейсове"
+        ],
         "color_scheme": "scheme-2",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "slideshow_9Lagcw": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_qzMeki": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/f24effff-b38b-45b3-be62-d6bde4b9c3a4.jpg",
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "bottom-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-4",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_MYchV9": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/f24effff-b38b-45b3-be62-d6bde4b9c3a4.jpg",
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "bottom-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-4",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_qzMeki",
-        "slide_MYchV9"
-      ],
-      "disabled": true,
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "small",
-        "slider_visual": "dots",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "ambient",
-        "show_text_below": false,
-        "accessibility_info": "Slideshow about our brand"
       }
     },
     "collection_list_nLjRCi": {
@@ -142,7 +42,7 @@
         "featured_collection_waXtwA"
       ],
       "settings": {
-        "title": "Collections",
+        "title": "Категории",
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 3,
@@ -150,16 +50,16 @@
         "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "padding_top": 60,
         "padding_bottom": 36
       }
     },
     "featured_collection_gGDRYA": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
+        "title": "<strong>Кейсове<\/strong>",
         "heading_size": "h1",
-        "description": "",
+        "description": "<p>Айфон 13<\/p>",
         "show_description": false,
         "description_style": "body",
         "collection": "кейсове",
@@ -178,16 +78,16 @@
         "enable_quick_add": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 60,
+        "padding_bottom": 8
       }
     },
     "featured_collection_YJQpG7": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
+        "title": "<strong>Протектори<\/strong>",
         "heading_size": "h1",
-        "description": "",
+        "description": "<p>Айфон 14<\/p>",
         "show_description": false,
         "description_style": "body",
         "collection": "протектори",
@@ -203,19 +103,19 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "enable_quick_add": false,
+        "enable_quick_add": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 60,
+        "padding_bottom": 52
       }
     },
     "featured_collection_wdRmUm": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
+        "title": "<strong>Калъфи<\/strong>",
         "heading_size": "h1",
-        "description": "",
+        "description": "<p>Айфон 14<\/p>",
         "show_description": false,
         "description_style": "body",
         "collection": "калъфи",
@@ -231,11 +131,11 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "enable_quick_add": false,
+        "enable_quick_add": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 60
       }
     },
     "contact_form_CWYEGN": {
@@ -251,7 +151,6 @@
   },
   "order": [
     "hero_r8ekdq",
-    "slideshow_9Lagcw",
     "collection_list_nLjRCi",
     "featured_collection_gGDRYA",
     "featured_collection_YJQpG7",

@@ -32,6 +32,8 @@
     }
   {%- endstyle -%}
 
+  {{ 'services.css' | asset_url | stylesheet_tag }}
+
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
   {%- if product.quantity_price_breaks_configured? -%}
@@ -537,6 +539,35 @@
               {% render 'icon-with-text',
                 block: block
               %}
+            {%- when 'product_services' -%}
+              {% comment %} Here {% endcomment %}
+              <div class="services">
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                    <h3>Бърза доставка един работен ден</h3>
+
+                    <p>Безплатна доставка за всяка поръчка на стойност над 50лв!</p>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <h3>Преглед и тест към всяка пратка</h3>
+
+                    <p>Ако продукта не ви хареса можете да го върнете!</p>
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-users"></i>
+
+                    <h3>Качествено обслужване</h3>
+
+                    <p>Ако имате нужда от помощ, попитайте наш консултант!</p>
+                  </li>
+                </ul>
+              </div><!-- /.services -->
           {%- endcase -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
@@ -901,6 +932,11 @@
           "info": "t:sections.custom-liquid.settings.custom_liquid.info"
         }
       ]
+    },
+    {
+      "type": "product_services",
+      "name": "Services",
+      "settings": []
     },
     {
       "type": "collapsible_tab",

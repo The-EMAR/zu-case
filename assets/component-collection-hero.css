@@ -23,6 +23,16 @@
   flex-basis: 100%;
 }
 
+.collection-hero__inner {
+  background-color: white;
+  border-radius: 1.6rem;
+  padding: 2rem;
+}
+
+.collection-hero {
+  padding: 2rem;
+}
+
 @media screen and (min-width: 750px) {
   .collection-hero {
     padding: 0;
@@ -67,7 +77,7 @@
 }
 
 .collection-hero--with-image .collection-hero__text-wrapper {
-  padding: 5rem 0 4rem;
+  padding: 0 0 2rem;
 }
 
 .collection-hero__image-container {

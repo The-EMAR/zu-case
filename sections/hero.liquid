@@ -1,6 +1,6 @@
 {{ 'hero.css' | asset_url | stylesheet_tag }}
 
-<script src="{{- 'hero-slider.js' | asset_url -}}" defer="defer"></script>
+<script src="{{ 'hero-slider.js' | asset_url }}" defer="defer"></script>
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -36,22 +36,21 @@
             {% endif %}
           </div><!-- /.hero__head -->
       
-          {% if _blocks.size > 0 %}
+          {%- assign collections = _section.collections -%}
+          {% if collections != blank %}
             <div class="hero__slider">
               <div class="splide" aria-label="Splide Basic HTML Example">
                 <div class="splide__track">
                   <ul class="splide__list">
-                    {% for block in _blocks %}
-                      {% assign _block = block.settings %}
-
-                      {% if _block.image != blank %}
+                    {%- for collection in collections -%}
+                      {%- for product in collection.products -%}
                         <li class="splide__slide">
                           <div class="hero__image">
-                            <img src="{{ _block.image | image_url: width: 1024 }}" loading="lazy" alt="">
+                            <img style="object-fit: {{ _section.slide_media }};" src="{{ product.featured_image | image_url: width: 1024 }}" loading="lazy" alt="">
                           </div><!-- /.hero__image -->
                         </li>
-                      {% endif %}
-                    {% endfor %}
+                      {%- endfor -%}
+                    {%- endfor -%}
                   </ul>
                 </div>
               </div>
@@ -65,7 +64,7 @@
 
 {% schema %}
   {
-  "name": "Hero",
+  "name": "Products Release",
   "settings": [
     {
       "type": "text",
@@ -76,6 +75,32 @@
       "type": "richtext",
       "id": "content",
       "label": "Content"
+    },
+    {
+      "type": "header",
+      "content": "Slides"
+    },
+    {
+      "type": "select",
+      "id": "slide_media",
+      "label": "Media ",
+      "options": [
+        {
+          "value": "cover",
+          "label": "Cover"
+        },
+        {
+          "value": "contain",
+          "label": "Contain"
+        }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "collection_list",
+      "id": "collections",
+      "label": "Collections",
+      "limit": 1
     },
     {
       "type": "color_scheme",
@@ -109,22 +134,10 @@
       "default": 36
     }
   ],
-  "blocks": [
-    {
-      "name": "Slide",
-      "type": "slide",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
-        }
-      ]
-    }
-  ],
+  "blocks": [],
   "presets": [
     {
-      "name": "Hero"
+      "name": "Products Release"
     }
   ]
 }  

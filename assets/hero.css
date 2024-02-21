@@ -15,7 +15,7 @@
 
 .hero .hero__image {
   position: relative;
-  min-height: 17rem;
+  min-height: 23rem;
   overflow: hidden;
   border-radius: 1.6rem;
 }
@@ -25,4 +25,16 @@
   background-color: white;
   border-radius: 1.6rem;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem
+}
+
+.hero .hero__head {
+  text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  
 }
