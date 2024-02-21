@@ -212,6 +212,8 @@
 .card__heading {
   margin-top: 0;
   margin-bottom: 0;
+  /* font-weight: 600; */
+  /* font-size: calc(1.6rem * 1.333) !important; */
 }
 
 .card__heading:last-child {
@@ -301,13 +303,13 @@
   }
 
   .card-wrapper:hover .media.media--hover-effect > img:first-child:not(:only-child) {
-    /* opacity: 0; */
+    opacity: 0;
   }
 
   .card-wrapper:hover .media.media--hover-effect > img + img {
     opacity: 1;
     transition: transform var(--duration-long) ease;
-    transform: scale(1.03);
+    transform: scale(1.08);
   }
 
   .underline-links-hover:hover a {

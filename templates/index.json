@@ -57,7 +57,7 @@
     "featured_collection_gGDRYA": {
       "type": "featured-collection",
       "settings": {
-        "title": "<strong>Кейсове<\/strong>",
+        "title": "Кейсове",
         "heading_size": "h1",
         "description": "<p>Айфон 13<\/p>",
         "show_description": false,
@@ -85,7 +85,7 @@
     "featured_collection_YJQpG7": {
       "type": "featured-collection",
       "settings": {
-        "title": "<strong>Протектори<\/strong>",
+        "title": "Протектори",
         "heading_size": "h1",
         "description": "<p>Айфон 14<\/p>",
         "show_description": false,
@@ -113,7 +113,7 @@
     "featured_collection_wdRmUm": {
       "type": "featured-collection",
       "settings": {
-        "title": "<strong>Калъфи<\/strong>",
+        "title": "Калъфи",
         "heading_size": "h1",
         "description": "<p>Айфон 14<\/p>",
         "show_description": false,
@@ -138,14 +138,38 @@
         "padding_bottom": 60
       }
     },
-    "contact_form_CWYEGN": {
-      "type": "contact-form",
+    "newsletter_KLRTbQ": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_47XQwW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_ywireY": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "email_form_hbzUXr": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_47XQwW",
+        "paragraph_ywireY",
+        "email_form_hbzUXr"
+      ],
       "settings": {
-        "heading": "Contact form",
-        "heading_size": "h1",
         "color_scheme": "scheme-2",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "image": "shopify:\/\/shop_images\/f24effff-b38b-45b3-be62-d6bde4b9c3a4_135a120f-ed16-4aee-b2b2-2140158b6975.jpg",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
@@ -155,6 +179,6 @@
     "featured_collection_gGDRYA",
     "featured_collection_YJQpG7",
     "featured_collection_wdRmUm",
-    "contact_form_CWYEGN"
+    "newsletter_KLRTbQ"
   ]
 }
