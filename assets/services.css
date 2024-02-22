@@ -19,10 +19,15 @@
   gap: 6rem;
 }
 
-/* Mobile */
-@media (max-width: 767px) {
+/* Tablet */
+@media (max-width: 1023px) {
   .services ul {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  
 }

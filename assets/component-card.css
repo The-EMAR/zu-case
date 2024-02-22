@@ -38,6 +38,7 @@
 
 .card--card {
   height: 100%;
+  padding: 2rem 2rem 1rem;
 }
 
 .card--card,
@@ -247,6 +248,7 @@
 
 .card--card.card--media > .card__content {
   margin-top: calc(0rem - var(--image-padding));
+  padding-bottom: 0;
 }
 
 .card--standard.card--text a::after,

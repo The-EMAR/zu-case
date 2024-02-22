@@ -47,6 +47,12 @@
             "default": "#FFFFFF"
           },
           {
+            "type": "color",
+            "id": "background_secondary",
+            "label": "Background secondary",
+            "default": "#FFFFFF"
+          },
+          {
             "type": "color_background",
             "id": "background_gradient",
             "label": "t:settings_schema.colors.settings.background_gradient.label",
@@ -62,6 +68,12 @@
             "type": "color",
             "id": "button",
             "label": "t:settings_schema.colors.settings.button_background.label",
+            "default": "#121212"
+          },
+          {
+            "type": "color",
+            "id": "button_hover",
+            "label": "Solid button hover",
             "default": "#121212"
           },
           {
@@ -1224,30 +1236,30 @@
   {
     "name": "t:settings_schema.badges.name",
     "settings": [
-      {
-        "type": "select",
-        "id": "badge_position",
-        "options": [
-          {
-            "value": "bottom left",
-            "label": "t:settings_schema.badges.settings.position.options__1.label"
-          },
-          {
-            "value": "bottom right",
-            "label": "t:settings_schema.badges.settings.position.options__2.label"
-          },
-          {
-            "value": "top left",
-            "label": "t:settings_schema.badges.settings.position.options__3.label"
-          },
-          {
-            "value": "top right",
-            "label": "t:settings_schema.badges.settings.position.options__4.label"
-          }
-        ],
-        "default": "bottom left",
-        "label": "t:settings_schema.badges.settings.position.label"
-      },
+      // {
+      //   "type": "select",
+      //   "id": "badge_position",
+      //   "options": [
+      //     {
+      //       "value": "bottom left",
+      //       "label": "t:settings_schema.badges.settings.position.options__1.label"
+      //     },
+      //     {
+      //       "value": "bottom right",
+      //       "label": "t:settings_schema.badges.settings.position.options__2.label"
+      //     },
+      //     {
+      //       "value": "top left",
+      //       "label": "t:settings_schema.badges.settings.position.options__3.label"
+      //     },
+      //     {
+      //       "value": "top right",
+      //       "label": "t:settings_schema.badges.settings.position.options__4.label"
+      //     }
+      //   ],
+      //   "default": "bottom left",
+      //   "label": "t:settings_schema.badges.settings.position.label"
+      // },
       {
         "type": "range",
         "id": "badge_corner_radius",

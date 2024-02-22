@@ -6,7 +6,7 @@ if (collectionSliders.length > 0) {
       perPage: 4,
       arrows: false,
       pagination: false,
-      gap: 30,
+      gap: 10,
       breakpoints: {
         1024: {
           perPage: 3,
